@@ -24,7 +24,7 @@ var (
 
 func TestEncryptValid(t *testing.T) {
 
-	_, err := encrypt(text1, blockKey1, iv1)
+	_, err := Encrypt(text1, blockKey1, iv1)
 	
 	if err != nil {
 		t.Error(err)
@@ -35,7 +35,7 @@ func TestEncryptValid(t *testing.T) {
 
 func TestEncryptMismatchBlockIVLength(t *testing.T) {
 
-	_, err := encrypt(text1, blockKey1, iv2)
+	_, err := Encrypt(text1, blockKey1, iv2)
 	
 	if err == nil {
 		t.Error(err)
@@ -47,7 +47,7 @@ func TestEncryptMismatchBlockIVLength(t *testing.T) {
 // This might be a valid case
 func TestEncryptEmptyBlockIv(t *testing.T) {
 
-	_, err := encrypt(text1, blockKey3, iv3)
+	_, err := Encrypt(text1, blockKey3, iv3)
 	
 	if err == nil {
 		t.Error(err)
@@ -58,7 +58,7 @@ func TestEncryptEmptyBlockIv(t *testing.T) {
 
 func TestEncryptEmptyText(t *testing.T) {
 
-	_, err := encrypt(text3, blockKey1, iv1)
+	_, err := Encrypt(text3, blockKey1, iv1)
 	
 	if err == nil {
 		t.Error(err)

@@ -9,7 +9,7 @@ import (
 )
 
 
-func decrypt(encText string, blockKey string,
+func Decrypt(encText string, blockKey string,
 	iv string) ([]byte, error) {
 
 	if len(blockKey) != len(iv) {
@@ -53,7 +53,7 @@ func decrypt(encText string, blockKey string,
 } // decrypt
 
 
-func encrypt(clearBuf []byte, blockKey string,
+func Encrypt(clearBuf []byte, blockKey string,
 	iv string) (string, error) {
 
 	if len(blockKey) != len(iv) {
