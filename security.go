@@ -50,7 +50,7 @@ func Decrypt(encText string, blockKey string,
 
 	}
 
-} // decrypt
+} // Decrypt
 
 
 func Encrypt(clearBuf []byte, blockKey string,
@@ -80,4 +80,4 @@ func Encrypt(clearBuf []byte, blockKey string,
 
 	}
 
-} // encrypt
+} // Encrypt
