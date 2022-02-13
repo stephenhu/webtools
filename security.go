@@ -81,3 +81,8 @@ func Encrypt(clearBuf []byte, blockKey string,
 	}
 
 } // Encrypt
+
+
+func HelloWorld() {
+
+} // HelloWorld
